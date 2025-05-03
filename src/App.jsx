@@ -31,7 +31,7 @@ const questions = [
 export default function App() {
   return (
     <div>
-      <h1>FlashCards</h1>
+      <h1 style={{ textAlign: "center" }}>FlashCards</h1>
       <Cards />
     </div>
   );
@@ -42,7 +42,7 @@ function Cards() {
 
   function handleClick(id) {
     console.log(id);
-    setSelectedId(id);
+    setSelectedId(selectedId !== id ? id : null);
   }
   return (
     <div className="flashcard-container">
